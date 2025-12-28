@@ -81,3 +81,541 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
+
+
+/* Add to your existing globals.css */
+
+/* Enhanced video styling */
+video {
+  object-fit: cover;
+  background: black;
+}
+
+/* Graffiti text effect */
+.graffiti-text {
+  background: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
+  background-size: 100px 100px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: graffiti-shift 20s linear infinite;
+}
+
+@keyframes graffiti-shift {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 200px; }
+}
+
+/* Parallax layer base */
+.parallax-layer {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  background: linear-gradient(to right, 
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Particle optimization */
+.particle {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .parallax-layer {
+    transform: none !important;
+  }
+  
+  video {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer,
+  video,
+  .graffiti-text,
+  .particle {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Add to your existing globals.css */
+
+/* Graffiti texture shift */
+@keyframes graffiti-shift {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 200px 200px, 300px 300px, 400px 400px;
+  }
+}
+
+/* Glitch effect for video transitions */
+@keyframes glitch-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Scanlines movement */
+@keyframes scanline-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}
+
+/* Noise flicker */
+@keyframes noise-flicker {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+/* Button border rotation */
+@keyframes conic-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optimize particles for performance */
+.particle {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth parallax transitions */
+.parallax-layer {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .parallax-layer {
+    transform: none !important;
+  }
+  
+  .particle {
+    display: none;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer,
+  video,
+  .particle,
+  [class*="animate-"] {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Add to your existing globals.css */
+
+/* 3D Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-500 {
+  perspective: 500px;
+}
+
+/* Magnetic field animation */
+@keyframes magnetic-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 0 rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 20px rgba(255, 255, 255, 0),
+      0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}
+
+.magnetic-pulse {
+  animation: magnetic-pulse 2s infinite;
+}
+
+/* Scroll hint animation */
+@keyframes scroll-hint {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+}
+
+.scroll-hint {
+  animation: scroll-hint 2s infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Rotating gradient border */
+@keyframes rotate-gradient {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-gradient {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: rotate-gradient 3s linear infinite;
+}
+
+/* Depth blur optimization */
+.depth-blur {
+  transition: filter 0.3s ease-out;
+  will-change: filter, transform;
+}
+
+/* Performance optimizations */
+.hoodie-slide {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .perspective-1000 {
+    perspective: 500px;
+  }
+  
+  .hoodie-slide {
+    min-width: 300px !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .magnetic-pulse,
+  .scroll-hint,
+  .animate-shimmer,
+  .rotate-gradient {
+    animation: none !important;
+  }
+}
+
+/* Add to globals.css */
+
+/* Velocity effects */
+@keyframes velocity-glow {
+  0%, 100% {
+    opacity: 0.1;
+    filter: blur(5px);
+  }
+  50% {
+    opacity: 0.3;
+    filter: blur(10px);
+  }
+}
+
+.velocity-glow {
+  animation: velocity-glow 0.5s infinite;
+}
+
+/* Distortion wave */
+@keyframes distortion-wave {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.distortion-wave {
+  animation: distortion-wave 1s ease-out;
+}
+
+/* Infinite loop indicator */
+@keyframes infinite-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.infinite-spin {
+  animation: infinite-spin 3s linear infinite;
+}
+
+/* Speed lines */
+@keyframes speed-line {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(-50%);
+    opacity: 0;
+  }
+}
+
+.speed-line {
+  animation: speed-line 0.5s linear infinite;
+}
+
+/* Hyper scroll effect */
+@keyframes hyper-scroll {
+  0% {
+    filter: hue-rotate(0deg) saturate(100%);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(200%);
+  }
+}
+
+.hyper-scroll {
+  animation: hyper-scroll 1s linear infinite;
+}
+
+/* Performance optimizations */
+#distortion-canvas {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  #distortion-canvas {
+    display: none;
+  }
+  
+  .velocity-glow,
+  .hyper-scroll {
+    animation: none;
+  }
+}
+/* Optimized animations */
+@keyframes float-large {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(var(--x, 0), var(--y, -150px)) rotate(180deg) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(calc(var(--x, 0) * 1.5), calc(var(--y, -150px) * 1.5)) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes float-small {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(var(--x, 0), var(--y, -50px));
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.2);
+  }
+}
+
+/* Performance optimizations */
+.particle {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .particle,
+  [class*="animate-"],
+  [style*="animation"] {
+    animation: none !important;
+  }
+  
+  video {
+    animation: none;
+  }
+}
+
+/* Add ONLY these new animations to your existing globals.css */
+
+/* Drip animation */
+@keyframes drip {
+  0%, 100% {
+    height: var(--height);
+    opacity: 0.3;
+  }
+  50% {
+    height: calc(var(--height) * 1.3);
+    opacity: 0.7;
+  }
+}
+
+/* Particle animations */
+@keyframes float-large {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(var(--x, 0), var(--y, -100px)) rotate(180deg) scale(1);
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(calc(var(--x, 0) * 1.3), calc(var(--y, -100px) * 1.3)) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes float-small {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(var(--x, 0), var(--y, -30px));
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Further reduce effects on mobile */
+  .particle {
+    display: none !important;
+  }
+  
+  [style*="animation"] {
+    animation: none !important;
+  }
+  
+  .graffiti-text {
+    animation: none !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

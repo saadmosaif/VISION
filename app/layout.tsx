@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import type React from "react"
 import { Inter } from "next/font/google"
 import { Footer } from "@/components/footer"
+import { ScrollProgress } from "@/components/scroll-progress"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {children}
+        <ScrollProgress />
         <Footer />
       </body>
     </html>

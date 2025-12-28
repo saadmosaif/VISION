@@ -1,4 +1,4 @@
-// File: C:\Users\Administrator\Desktop\vision-store-main\app\page.tsx
+// File: C:\Users\SAAD\Desktop\vision\VISION\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
